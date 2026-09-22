@@ -1,174 +1,182 @@
 // ============================================================
 //  SITE CONTENT — edit this file to update the whole website.
-//  Everything marked [FILLER] is placeholder text to replace.
 // ============================================================
 
 export const site = {
-  name: "Common Ground Street Health", // [FILLER]
-  shortName: "Common Ground", // shown large in the logo lockup
-  brandSub: "Street Health", // shown small under it
-  tagline: "Free medical care for people experiencing homelessness.",
+  name: "Rockford Street Medicine",
+  shortName: "Rockford", // shown large in the logo lockup
+  brandSub: "Street Medicine", // shown small under it
+  tagline: "Barrier-free medical care on the streets of Rockford.",
   description:
-    "Common Ground Street Health provides free primary care, wound care, behavioral health services and care coordination to people experiencing homelessness in Chicago.", // [FILLER]
-  url: "https://example.org", // set to your real domain once connected
-  city: "Chicago, IL", // [FILLER]
-  email: "hello@example.org", // [FILLER]
-  phone: "(312) 555-0142", // [FILLER] outreach line
-  phoneHref: "tel:+13125550142",
-  textLine: "(312) 555-0199", // [FILLER] text line
-  textHref: "sms:+13125550199",
-  address: "1200 W Example Ave, Suite 100, Chicago, IL 60607", // [FILLER] mailing address
-  ein: "00-0000000", // [FILLER] 501(c)(3) EIN
-  donateUrl: "https://example.org/donate", // [FILLER] Stripe / Givebutter / Donorbox link
+    "Rockford Street Medicine provides compassionate, people-centered, barrier-free medical care, harm reduction resources and social support directly to people experiencing homelessness and housing insecurity in Rockford.",
+  url: "https://streethealth1.vercel.app", // change once a custom domain is connected
+  city: "Rockford, IL",
+  email: "rockfordstreetmedicine@gmail.com",
   social: {
-    instagram: "https://instagram.com/", // [FILLER]
-    facebook: "https://facebook.com/",
-    linkedin: "https://linkedin.com/",
+    instagram: "https://www.instagram.com/rockfordstreetmedicinesig/",
+    instagramHandle: "@rockfordstreetmedicinesig",
+    facebook: "", // add the Facebook page link when available
   },
+  wishlistUrl: "https://www.amazon.com/hz/wishlist/ls/1ZXE7CVSKVAU2",
+  volunteerSignupUrl: "https://www.signupgenius.com/go/10C0548AEAA2AA1FFC43-64894741-september",
+  newVolunteerContact: { name: "Brianna Blaine", email: "bblai@uic.edu" },
 };
+
+export const partnerMailto = `mailto:${site.email}?subject=${encodeURIComponent("Partnering with Rockford Street Medicine")}`;
 
 export const nav = [
   { label: "About", href: "/about" },
-  { label: "Services", href: "/services" },
-  { label: "Get Care", href: "/get-care" },
+  { label: "What We Do", href: "/services" },
   { label: "Get Involved", href: "/get-involved" },
   { label: "Contact", href: "/contact" },
 ];
 
+export const mission = [
+  "Rockford Street Medicine provides compassionate, people-centered, barrier-free medical care, harm reduction resources, and social support directly to individuals experiencing homelessness, housing insecurity, and other barriers to care in Rockford. Through strong partnerships with community organizations, Rockford Street Medicine prioritizes safety, dignity, and continuity of care while training medical residents, medical students, and other healthcare professionals in the practice of street medicine.",
+  "Rockford Street Medicine is committed to meeting people where they are, addressing immediate and acute needs, building trust, and fostering long-term health and well-being within the communities it serves. The organization also collects and analyzes meaningful data to inform sustainable health and social solutions.",
+];
+
 export const home = {
-  kicker: "Street medicine in Chicago since 2019", // [FILLER]
-  headline: "Free medical care on the streets of Chicago.",
+  kicker: "Medical runs in Rockford since January 2026",
+  headline: "Medical care that meets people where they are.",
   intro:
-    "Our clinicians and outreach staff provide free medical care on the street, in encampments and in shelters across Chicago. No identification, insurance or appointment is required.",
+    "We provide free, trauma-informed medical care, harm reduction resources and social support directly to people experiencing homelessness and housing insecurity in Rockford.",
   heroImage: "", // optional photo, e.g. "/images/hero.jpg" (file in /public/images). Empty = floral illustration.
-  heroImageAlt: "Outreach team talking with a patient",
-  statsCaption: "Figures reflect fiscal year 2025.", // [FILLER]
-  stats: [
-    { value: "4,800+", label: "Street visits last year" }, // [FILLER]
-    { value: "1,150", label: "Unique patients served" },
-    { value: "212", label: "Neighbors connected to housing" },
-    { value: "5", label: "Nights a week on the street" },
-  ],
-  approach: [
-    {
-      title: "Care in the community",
-      body: "We provide medical care where patients live, removing the transportation, cost and paperwork barriers that keep many people from a clinic.",
-    },
-    {
-      title: "Consistent relationships",
-      body: "The same clinicians visit the same routes each week, so patients can build trust and receive continuous follow-up care.",
-    },
-    {
-      title: "Connection to services",
-      body: "Care coordinators help patients obtain identification, enroll in benefits, attend specialist appointments and apply for housing.",
-    },
-  ],
+  heroImageAlt: "",
   quote: {
-    text: "They came to me when I couldn't get to a doctor, and they kept coming back until I was well enough to get housed.", // [FILLER]
-    attribution: "Patient, Lower Wacker outreach route",
+    text: "I love being able to connect human to human and build relationships with the people we are serving! Providing dignity and respect to people through giving basic resources, support, a listening ear, and medical care is such a privilege.",
+    attribution: "Madeleine Meehan, President & Founding Member",
   },
 };
+
+// "RSM by the numbers" — update these after each reporting period.
+export const numbers = {
+  asOf: "August 22, 2026",
+  firstRun: "January 7, 2026",
+  stats: [
+    { value: "54", label: "Medical runs" },
+    { value: "1,100", label: "Patient encounters" },
+    { value: "20.4", label: "Average encounters per run" },
+    { value: "59", label: "Volunteers" },
+    { value: "786", label: "Service hours" },
+    { value: "$26,339.88", label: "Economic impact" },
+  ],
+};
+
+export const approach = [
+  {
+    title: "Meeting people where they are",
+    body: "We bring care directly to people experiencing homelessness and housing insecurity, addressing immediate and acute needs and building trust over time.",
+  },
+  {
+    title: "Safety, dignity and continuity",
+    body: "Through partnerships with community organizations, we connect people to ongoing care and support that continues after we leave.",
+  },
+  {
+    title: "Training and data",
+    body: "We train medical residents, medical students and other healthcare professionals in street medicine, and collect data to inform sustainable health and social solutions.",
+  },
+];
 
 export const services = [
   {
-    slug: "primary-care",
-    title: "Primary & Urgent Care",
-    summary: "Physical exams, treatment of acute illness, chronic disease management and prescriptions.",
-    details: ["Blood pressure & diabetes management", "Infections and respiratory illness", "Medication refills and prescriptions", "Referrals and specialist coordination"],
-  },
-  {
-    slug: "wound-care",
-    title: "Wound & Foot Care",
-    summary: "Wound cleaning, dressing and follow-up to prevent infection and serious complications.",
-    details: ["Wound cleaning and dressing", "Foot exams and trench-foot prevention", "Socks, boots and hygiene supplies", "Follow-up visits on our routes"],
+    slug: "medical-care",
+    title: "Medical care on the street",
+    summary: "Free, trauma-informed medical care provided wherever people are staying.",
+    details: [
+      "Medications",
+      "Wound care",
+      "Prenatal care",
+      "Follow-up care after hospital discharge",
+      "Vital signs and health screenings, including blood pressure checks and glucose monitoring",
+    ],
   },
   {
     slug: "behavioral-health",
-    title: "Mental Health & Recovery",
-    summary: "Low-barrier mental health and substance use care, including medication for opioid use disorder.",
-    details: ["Psychiatric evaluation and follow-up", "Buprenorphine (MAT) on the street", "Naloxone distribution and training", "Warm handoffs to treatment programs"],
+    title: "Behavioral health & recovery",
+    summary: "Mental health and substance use care delivered on the street by specialists.",
+    details: [
+      "Behavioral health visits and medication with a psychiatrist",
+      "Substance use counseling",
+      "Medication-assisted treatment (MAT) from addiction medicine specialists",
+      "Harm reduction resources",
+    ],
   },
   {
     slug: "navigation",
-    title: "Care Navigation & Housing",
-    summary: "Help obtaining identification, health coverage, benefits and housing.",
-    details: ["State ID and birth certificate recovery", "Medicaid and benefits enrollment", "Coordinated entry for housing", "Rides to appointments"],
-  },
-  {
-    slug: "hospital-consult",
-    title: "Hospital Consult Service",
-    summary: "Inpatient visits and discharge planning for our patients when they are hospitalized.",
-    details: ["Inpatient visits for known patients", "Discharge planning with hospital teams", "Continuity back to the street team", "Respite care coordination"],
+    title: "Connection to care",
+    summary: "Warm handoffs to clinics and community partners so care continues.",
+    details: [
+      "Warm handoffs with clinic providers",
+      "Help with walk-in and scheduled appointments",
+      "Connections to community partners",
+      "Public transportation passes for medical appointments",
+    ],
   },
   {
     slug: "basic-needs",
-    title: "Basic Needs & Harm Reduction",
-    summary: "Water, food, seasonal clothing, hygiene kits and harm reduction supplies.",
-    details: ["Seasonal survival kits", "Hygiene and first-aid kits", "Fentanyl test strips and naloxone", "Phone charging and connection"],
+    title: "Supplies & basic needs",
+    summary: "Seasonal gear, hygiene items, clothing, food and water.",
+    details: [
+      "Cold weather items: hats, gloves, socks, hand warmers",
+      "Warm weather items: sunscreen, bug spray, ponchos, cold water, cooling towels",
+      "Hygiene, wound care and first aid supplies",
+      "Clothes, shoes, snacks and water",
+    ],
   },
 ];
 
-// Weekly outreach schedule shown on /get-care  [FILLER]
-export const schedule = [
-  { day: "Monday", time: "6:00 – 9:00 PM", area: "Lower Wacker Drive & Loop", type: "Walking route" },
-  { day: "Tuesday", time: "9:00 AM – 12:00 PM", area: "Pacific Garden Mission (shelter clinic)", type: "Pop-up clinic" },
-  { day: "Wednesday", time: "6:00 – 9:00 PM", area: "Chicago River / Riverwalk", type: "Walking route" },
-  { day: "Thursday", time: "1:00 – 5:00 PM", area: "Uptown · Wilson & Broadway", type: "Mobile van" },
-  { day: "Saturday", time: "10:00 AM – 2:00 PM", area: "Humboldt Park encampments", type: "Walking route" },
+// Items we hand out on runs — shown on the Donate page.
+export const inventory = [
+  { group: "Cold weather", items: ["Hats", "Gloves", "Socks", "Hand warmers"] },
+  { group: "Warm weather", items: ["Sunscreen", "Bug spray", "Ponchos", "Cooling towels", "Bottled water"] },
+  { group: "Health & hygiene", items: ["Hygiene items", "Wound care supplies", "First aid supplies"] },
+  { group: "Everyday needs", items: ["Clothes", "Shoes", "Snacks", "Public transportation passes"] },
 ];
 
-export const about = {
-  headline: "About Common Ground Street Health",
-  story: [
-    "Common Ground began in 2019 when a handful of nurses and medical students started walking the city's viaducts on weeknights with backpacks full of supplies.", // [FILLER]
-    "Today our staff includes physicians, nurse practitioners, social workers, peer navigators and more than 80 trained volunteers. We provide more than 4,800 patient visits each year.",
-    "Our model follows established street medicine practice: providing care directly in the places where unsheltered people live, and coordinating closely with shelters, hospitals and housing agencies.",
-  ],
-  values: [
-    { title: "Dignity", body: "Every person we serve is a neighbor, not a case." },
-    { title: "Consistency", body: "We return to the same routes every week, in every season." },
-    { title: "Low barriers", body: "No ID, insurance or appointment required. Ever." },
-    { title: "Partnership", body: "We work with shelters, hospitals and housing agencies to close gaps together." },
-  ],
-  team: [
-    // [FILLER] add photo paths like "/images/team/jane.jpg"
-    { name: "Dr. Jordan Ellis", role: "Medical Director", photo: "" },
-    { name: "Maria Santos, NP", role: "Lead Nurse Practitioner", photo: "" },
-    { name: "Andre Wallace", role: "Peer Navigator", photo: "" },
-    { name: "Priya Nair, LCSW", role: "Behavioral Health Lead", photo: "" },
-    { name: "Sam Okafor", role: "Outreach Coordinator", photo: "" },
-    { name: "Leah Kim", role: "Volunteer Program Manager", photo: "" },
-  ],
-  partners: ["City Health Dept.", "Northside Hospital", "Pacific Garden Mission", "Housing Forward", "Street Medicine Institute", "County Medicaid"], // [FILLER]
-};
+export const partners = [
+  "Live4Lali",
+  "Red Cross",
+  "Hope Reaching Out",
+  "University of Illinois College of Medicine",
+  "University of Illinois Family Medicine Residency Program",
+];
 
-export const getInvolved = {
-  volunteerRoles: [
-    { title: "Clinical volunteers", body: "Physicians, NPs, PAs, RNs and pharmacists join outreach shifts alongside our core team." },
-    { title: "Student volunteers", body: "Medical, nursing and social work students gain supervised street medicine experience." },
-    { title: "Community volunteers", body: "Pack supply kits, drive the van, help with events and keep our operations moving." },
-  ],
-  wishlist: [
-    // [FILLER] link to an Amazon wishlist or drop-off instructions
-    "New wool socks", "Hand & foot warmers", "Travel-size hygiene items", "Rain ponchos", "Granola bars & water", "Reading glasses", "Phone chargers", "Backpacks",
-  ],
-  wishlistUrl: "", // e.g. Amazon wishlist link
-};
+// Add photos to /public/team and set `photo` to "/team/<file>.jpg".
+export const executiveBoard = [
+  {
+    name: "Madeleine Meehan",
+    credential: "MD/MPH Candidate",
+    role: "President, Founding Member",
+    photo: "/team/madeleine-meehan.jpg",
+    email: "mmeehan3@uic.edu",
+    bio: {
+      hometown: "Brookfield, IL",
+      undergrad: "University of Illinois Urbana-Champaign",
+      interests: "My dog, hiking, ceramics, watercolor painting, traveling, cooking, yoga",
+      why: "I love being able to connect human to human and build relationships with the people we are serving! Providing dignity and respect to people through giving basic resources, support, a listening ear, and medical care is such a privilege. I love getting to use principles of public health to make personal changes in the lives of those we serve. Getting to build this organization with so many incredible people has been an honor.",
+    },
+  },
+  { name: "Emily Drew", role: "Vice President, Founding Member", photo: "/team/emily-drew.jpg" },
+  { name: "Navdeep Kaur", role: "Clinical Coordinator, Founding Member", photo: "/team/navdeep-kaur.jpg" },
+  { name: "Brianna Blaine", role: "Risk Management", photo: "" },
+  { name: "Nathan Yoon", role: "Treasurer", photo: "" },
+  { name: "Raneem Qassem", role: "Secretary", photo: "" },
+  { name: "Ramsha Akram", role: "Education Director", photo: "" },
+  { name: "Ben Ross", role: "Supplies Director", photo: "" },
+  { name: "Ryan Lawson", role: "Research Director", photo: "" },
+  { name: "Adam Geibel", role: "Grant Coordinator", photo: "/team/adam-geibel.jpg" },
+];
 
-export const donate = {
-  headline: "Support free care on the street",
-  body: "Common Ground Street Health is a 501(c)(3) nonprofit organization. Contributions fund clinical staff, medical supplies and care coordination for our patients.",
-  impact: [
-    { amount: 25, label: "stocks a winter survival kit" },
-    { amount: 75, label: "covers wound care supplies for a week" },
-    { amount: 250, label: "funds a full night of outreach" },
-    { amount: 1000, label: "helps one neighbor secure ID, benefits and housing" },
-  ],
-};
+// Empty until the board is announced; the About page shows a "coming soon" note.
+export const boardOfDirectors = [];
 
-export const faqs = [
-  { q: "Do I need insurance or ID to be seen?", a: "No. All of our street care is free and requires no ID, insurance or appointment." },
-  { q: "How do I request a visit for someone?", a: "Call or text our outreach line with a location and description. If it's an emergency, call 911." },
-  { q: "Are you a shelter?", a: "No — we're a mobile medical team. We partner closely with local shelters and can help connect people to beds." },
-  { q: "Can I donate supplies?", a: "Yes! See our wishlist on the Get Involved page, or contact us to arrange a drop-off." },
+export const emeritusBoard = [
+  "Ryan Walton",
+  "Amaan Chalisa",
+  "Kayla Wartman",
+  "Madeleine Meehan",
+  "Alyssa Steege",
+  "Navdeep Kaur",
+  "Emily Drew",
 ];

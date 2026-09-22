@@ -14,14 +14,14 @@ export const metadata = {
   twitter: { card: "summary_large_image", title: site.name, description: site.description },
 };
 
-export const viewport = { themeColor: "#4a2340" };
+export const viewport = { themeColor: "#002856" };
 
 export default function RootLayout({ children }) {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": ["NGO", "MedicalOrganization"],
-    name: site.name, url: site.url, email: site.email, telephone: site.phone,
-    address: site.address, description: site.description,
+    name: site.name, url: site.url, email: site.email, description: site.description,
+    areaServed: site.city, sameAs: [site.social.instagram, site.social.facebook].filter(Boolean),
   };
   return (
     <html lang="en">

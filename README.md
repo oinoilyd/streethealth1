@@ -1,13 +1,15 @@
-# Street Health website
+# Rockford Street Medicine website
 
 Next.js site, deployed on Vercel.
 
 ## Edit content
-Almost everything lives in **`content/site.js`** — org name, phone numbers, stats, services,
-schedule, team, FAQs, donate link. Lines marked `[FILLER]` are placeholders.
+Almost everything lives in **`content/site.js`**: contact email, Instagram, wishlist and
+volunteer sign-up links, "by the numbers" stats, services, donation inventory, partners and
+board members.
 
-Photos: drop files into `public/images/` and set the path in `content/site.js`
-(e.g. `heroImage: "/images/hero.jpg"`). Empty paths show a branded placeholder.
+Photos: team headshots go in `public/team/` (set `photo: "/team/name.jpg"` on the person).
+An optional home hero photo goes in `public/images/` (set `home.heroImage`).
+The logo is `public/logo.png`; favicons are `app/icon.png` and `app/apple-icon.png`.
 
 ## Run locally (optional)
     npm install
@@ -15,7 +17,3 @@ Photos: drop files into `public/images/` and set the path in `content/site.js`
 
 ## Deploy
 Every `git push` to `main` auto-deploys on Vercel.
-
-## Contact form email
-Works immediately (submissions appear in Vercel → Logs). To receive emails,
-add the variables from `.env.example` in Vercel → Settings → Environment Variables, then redeploy.

@@ -2,7 +2,7 @@
 // Colors come from CSS variables so the palette stays in globals.css.
 
 const C = {
-  petal: "var(--rose)",
+  petal: "var(--red)",
   petalLight: "var(--blush-deep)",
   center: "var(--marigold)",
   leaf: "var(--leaf)",
@@ -23,7 +23,7 @@ export function Blossom({ x, y, r = 16, rot = 0, light = false }) {
   ));
   const dots = Array.from({ length: 8 }, (_, i) => {
     const a = (i * 45 * Math.PI) / 180;
-    return <circle key={i} cx={Math.cos(a) * r * 0.42} cy={Math.sin(a) * r * 0.42} r={r * 0.055} fill="var(--plum)" opacity=".55" />;
+    return <circle key={i} cx={Math.cos(a) * r * 0.42} cy={Math.sin(a) * r * 0.42} r={r * 0.055} fill="var(--navy)" opacity=".55" />;
   });
   return (
     <g transform={`translate(${x} ${y}) rotate(${rot})`}>
