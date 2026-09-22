@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 
-export default function ContactForm({ defaultTopic = "General question", topics }) {
+export default function ContactForm({ defaultTopic = "General question", topics, title }) {
   const [status, setStatus] = useState({ state: "idle", msg: "" });
   const options = topics || ["General question", "Request an outreach visit", "Volunteer", "Donate supplies", "Partnership", "Media"];
 
@@ -15,14 +15,15 @@ export default function ContactForm({ defaultTopic = "General question", topics 
       const json = await res.json();
       if (!res.ok) throw new Error(json.error || "Something went wrong.");
       form.reset();
-      setStatus({ state: "ok", msg: "Thank you — your message is in. We'll get back to you within two business days." });
+      setStatus({ state: "ok", msg: "Thank you. Your message has been received and we will respond within two business days." });
     } catch (err) {
       setStatus({ state: "err", msg: err.message });
     }
   }
 
   return (
-    <form className="form" onSubmit={onSubmit} noValidate={false}>
+    <form className="form" onSubmit={onSubmit}>
+      {title && <h3>{title}</h3>}
       <div className="form-row">
         <div className="field"><label htmlFor="name">Name</label><input id="name" name="name" required autoComplete="name" /></div>
         <div className="field"><label htmlFor="email">Email</label><input id="email" name="email" type="email" required autoComplete="email" /></div>
@@ -39,7 +40,7 @@ export default function ContactForm({ defaultTopic = "General question", topics 
       <div className="field"><label htmlFor="message">Message</label><textarea id="message" name="message" required /></div>
       <input className="hp" name="company" tabIndex={-1} autoComplete="off" aria-hidden="true" />
       <button className="btn btn-dark" type="submit" disabled={status.state === "sending"}>
-        {status.state === "sending" ? "Sending…" : <>Send message <span className="arrow">→</span></>}
+        {status.state === "sending" ? "Sending…" : "Send message"}
       </button>
       <p className="form-note">This form is not monitored 24/7. For urgent needs call our outreach line, or 911 in an emergency.</p>
       {status.state === "ok" && <div className="form-status ok" role="status">{status.msg}</div>}

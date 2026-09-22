@@ -1,11 +1,10 @@
-import "@fontsource-variable/fraunces";
-import "@fontsource-variable/inter";
+import "@fontsource-variable/source-serif-4/opsz.css";
+import "@fontsource-variable/public-sans";
 import "./globals.css";
 import { site } from "@/content/site";
 import AlertBar from "@/components/AlertBar";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import Reveal from "@/components/Reveal";
 
 export const metadata = {
   metadataBase: new URL(site.url),
@@ -15,7 +14,7 @@ export const metadata = {
   twitter: { card: "summary_large_image", title: site.name, description: site.description },
 };
 
-export const viewport = { themeColor: "#1f3d33" };
+export const viewport = { themeColor: "#4a2340" };
 
 export default function RootLayout({ children }) {
   const jsonLd = {
@@ -32,7 +31,6 @@ export default function RootLayout({ children }) {
         <Header />
         <main id="main">{children}</main>
         <Footer />
-        <Reveal />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       </body>
     </html>

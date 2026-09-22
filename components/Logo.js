@@ -1,9 +1,15 @@
-export default function LogoMark({ size = 20 }) {
-  // Simple placeholder mark: a cross inside a path/route. Replace with your logo in /public.
+import { Blossom, Leaf } from "./Botanical";
+
+// Placeholder emblem — swap for your real logo file later.
+export default function Emblem({ className = "brand-emblem", ring = "var(--plum)" }) {
   return (
-    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" aria-hidden="true">
-      <path d="M12 5v14M5 12h14" stroke="#fff" strokeWidth="3" strokeLinecap="round" />
-      <circle cx="12" cy="12" r="10" stroke="#e3b448" strokeWidth="1.5" strokeDasharray="3 3" />
+    <svg className={className} viewBox="0 0 64 64" aria-hidden="true">
+      <circle cx="32" cy="32" r="30" fill="#fff" stroke={ring} strokeWidth="2.5" />
+      <circle cx="32" cy="32" r="25.5" fill="none" stroke={ring} strokeWidth="0.8" opacity=".5" />
+      <Leaf x={32} y={36} len={17} rot={-160} />
+      <Leaf x={32} y={36} len={17} rot={-20} light />
+      <path d="M32 50 L32 36" stroke="var(--leaf)" strokeWidth="2" strokeLinecap="round" />
+      <Blossom x={32} y={27} r={11} />
     </svg>
   );
 }

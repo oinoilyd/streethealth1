@@ -1,10 +1,12 @@
 import Link from "next/link";
+import { Sprig } from "@/components/Botanical";
 export default function NotFound() {
   return (
     <section className="section center"><div className="container">
-      <div className="eyebrow">404</div><h1>This page took a different route.</h1>
-      <p className="lede">The page you&rsquo;re looking for doesn&rsquo;t exist.</p>
-      <Link href="/" className="btn btn-dark" style={{ marginTop: 20 }}>Back home</Link>
+      <Sprig width={130} className="ornament" />
+      <h1>Page not found</h1>
+      <p className="lede">The page you requested could not be found.</p>
+      <Link href="/" className="btn btn-dark" style={{ marginTop: 16 }}>Return home</Link>
     </div></section>
   );
 }

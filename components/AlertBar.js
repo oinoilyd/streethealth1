@@ -1,15 +1,19 @@
+import Link from "next/link";
 import { site } from "@/content/site";
 
 export default function AlertBar() {
   return (
-    <div className="alertbar" role="region" aria-label="Urgent contact">
+    <div className="utility" role="region" aria-label="Urgent contact">
       <div className="container">
         <span>
-          Need care or see someone who does? Call <a href={site.phoneHref}>{site.phone}</a> or text{" "}
-          <a href={site.textHref}>{site.textLine}</a>
+          Outreach line <a href={site.phoneHref}>{site.phone}</a>
+          <span className="sep">|</span>Text <a href={site.textHref}>{site.textLine}</a>
+          <span className="sep">|</span>Emergency <a href="tel:911">911</a> · Crisis <a href="tel:988">988</a>
         </span>
-        <span className="emergency">
-          Emergency: <a href="tel:911">911</a> · Crisis: <a href="tel:988">988</a>
+        <span className="utility-links">
+          <Link href="/get-involved">Volunteer</Link><span className="sep">|</span>
+          <Link href="/contact">Contact</Link><span className="sep">|</span>
+          <Link href="/donate">Donate</Link>
         </span>
       </div>
     </div>

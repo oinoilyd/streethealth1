@@ -5,10 +5,11 @@
 
 export const site = {
   name: "Common Ground Street Health", // [FILLER]
-  shortName: "Common Ground",
-  tagline: "Medicine that meets people where they are.",
+  shortName: "Common Ground", // shown large in the logo lockup
+  brandSub: "Street Health", // shown small under it
+  tagline: "Free medical care for people experiencing homelessness.",
   description:
-    "A mobile street medicine team bringing free primary care, wound care, mental health support and a path to housing to unsheltered neighbors across the city.", // [FILLER]
+    "Common Ground Street Health provides free primary care, wound care, behavioral health services and care coordination to people experiencing homelessness in Chicago.", // [FILLER]
   url: "https://example.org", // set to your real domain once connected
   city: "Chicago, IL", // [FILLER]
   email: "hello@example.org", // [FILLER]
@@ -35,12 +36,13 @@ export const nav = [
 ];
 
 export const home = {
-  eyebrow: "Street medicine · Since 2019", // [FILLER]
-  headline: "Healthcare shouldn't require an address.",
+  kicker: "Street medicine in Chicago since 2019", // [FILLER]
+  headline: "Free medical care on the streets of Chicago.",
   intro:
-    "Our clinicians walk the city every week — under viaducts, along the river, in encampments and shelters — delivering free, dignified care to neighbors living without housing.",
-  heroImage: "", // e.g. "/images/hero.jpg" — drop the file in /public/images
+    "Our clinicians and outreach staff provide free medical care on the street, in encampments and in shelters across Chicago. No identification, insurance or appointment is required.",
+  heroImage: "", // optional photo, e.g. "/images/hero.jpg" (file in /public/images). Empty = floral illustration.
   heroImageAlt: "Outreach team talking with a patient",
+  statsCaption: "Figures reflect fiscal year 2025.", // [FILLER]
   stats: [
     { value: "4,800+", label: "Street visits last year" }, // [FILLER]
     { value: "1,150", label: "Unique patients served" },
@@ -49,20 +51,20 @@ export const home = {
   ],
   approach: [
     {
-      title: "We go to them",
-      body: "No appointments, no waiting rooms. Care happens wherever our patients are — on their terms and their turf.",
+      title: "Care in the community",
+      body: "We provide medical care where patients live, removing the transportation, cost and paperwork barriers that keep many people from a clinic.",
     },
     {
-      title: "We keep showing up",
-      body: "Trust is the treatment. The same faces return week after week, building relationships that make real care possible.",
+      title: "Consistent relationships",
+      body: "The same clinicians visit the same routes each week, so patients can build trust and receive continuous follow-up care.",
     },
     {
-      title: "We bridge the gap",
-      body: "From ID recovery to specialist visits to housing, our navigators walk alongside patients into the systems that failed them.",
+      title: "Connection to services",
+      body: "Care coordinators help patients obtain identification, enroll in benefits, attend specialist appointments and apply for housing.",
     },
   ],
   quote: {
-    text: "They didn't ask me to come to them. They came to me — and then they kept coming back.", // [FILLER]
+    text: "They came to me when I couldn't get to a doctor, and they kept coming back until I was well enough to get housed.", // [FILLER]
     attribution: "Patient, Lower Wacker outreach route",
   },
 };
@@ -71,37 +73,37 @@ export const services = [
   {
     slug: "primary-care",
     title: "Primary & Urgent Care",
-    summary: "Exams, chronic disease management, prescriptions and acute care — delivered on the street.",
+    summary: "Physical exams, treatment of acute illness, chronic disease management and prescriptions.",
     details: ["Blood pressure & diabetes management", "Infections and respiratory illness", "Medication refills and prescriptions", "Referrals and specialist coordination"],
   },
   {
     slug: "wound-care",
     title: "Wound & Foot Care",
-    summary: "Among the most common needs we see. Cleaning, dressing and follow-up to prevent serious complications.",
+    summary: "Wound cleaning, dressing and follow-up to prevent infection and serious complications.",
     details: ["Wound cleaning and dressing", "Foot exams and trench-foot prevention", "Socks, boots and hygiene supplies", "Follow-up visits on our routes"],
   },
   {
     slug: "behavioral-health",
     title: "Mental Health & Recovery",
-    summary: "Compassionate, low-barrier support for mental health and substance use, including medication for addiction treatment.",
+    summary: "Low-barrier mental health and substance use care, including medication for opioid use disorder.",
     details: ["Psychiatric evaluation and follow-up", "Buprenorphine (MAT) on the street", "Naloxone distribution and training", "Warm handoffs to treatment programs"],
   },
   {
     slug: "navigation",
     title: "Care Navigation & Housing",
-    summary: "Getting well means getting stable. Our navigators help patients secure the documents, benefits and housing they need.",
+    summary: "Help obtaining identification, health coverage, benefits and housing.",
     details: ["State ID and birth certificate recovery", "Medicaid and benefits enrollment", "Coordinated entry for housing", "Rides to appointments"],
   },
   {
     slug: "hospital-consult",
     title: "Hospital Consult Service",
-    summary: "When patients are admitted, we follow them in — advocating for dignified care and safe discharge.",
+    summary: "Inpatient visits and discharge planning for our patients when they are hospitalized.",
     details: ["Inpatient visits for known patients", "Discharge planning with hospital teams", "Continuity back to the street team", "Respite care coordination"],
   },
   {
     slug: "basic-needs",
     title: "Basic Needs & Harm Reduction",
-    summary: "Every visit starts with something tangible — water, food, warm layers, hygiene kits and safer-use supplies.",
+    summary: "Water, food, seasonal clothing, hygiene kits and harm reduction supplies.",
     details: ["Seasonal survival kits", "Hygiene and first-aid kits", "Fentanyl test strips and naloxone", "Phone charging and connection"],
   },
 ];
@@ -116,15 +118,15 @@ export const schedule = [
 ];
 
 export const about = {
-  headline: "Built on presence, patience and respect.",
+  headline: "About Common Ground Street Health",
   story: [
     "Common Ground began in 2019 when a handful of nurses and medical students started walking the city's viaducts on weeknights with backpacks full of supplies.", // [FILLER]
-    "Today we're a team of physicians, nurse practitioners, social workers, peer navigators and volunteers — but the model hasn't changed. We go to people, we listen first, and we keep coming back.",
-    "Our work is rooted in the global street medicine movement: the belief that the most effective way to care for unsheltered people is to meet them in their own environment, with humility and consistency.",
+    "Today our staff includes physicians, nurse practitioners, social workers, peer navigators and more than 80 trained volunteers. We provide more than 4,800 patient visits each year.",
+    "Our model follows established street medicine practice: providing care directly in the places where unsheltered people live, and coordinating closely with shelters, hospitals and housing agencies.",
   ],
   values: [
     { title: "Dignity", body: "Every person we serve is a neighbor, not a case." },
-    { title: "Consistency", body: "Showing up — every week, in every season — is how trust is earned." },
+    { title: "Consistency", body: "We return to the same routes every week, in every season." },
     { title: "Low barriers", body: "No ID, insurance or appointment required. Ever." },
     { title: "Partnership", body: "We work with shelters, hospitals and housing agencies to close gaps together." },
   ],
@@ -154,8 +156,8 @@ export const getInvolved = {
 };
 
 export const donate = {
-  headline: "Your gift walks the route with us.",
-  body: "Common Ground is a 501(c)(3) nonprofit. Every dollar keeps clinicians on the street, supplies in their packs and patients connected to care.",
+  headline: "Support free care on the street",
+  body: "Common Ground Street Health is a 501(c)(3) nonprofit organization. Contributions fund clinical staff, medical supplies and care coordination for our patients.",
   impact: [
     { amount: 25, label: "stocks a winter survival kit" },
     { amount: 75, label: "covers wound care supplies for a week" },

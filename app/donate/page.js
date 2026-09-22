@@ -7,16 +7,17 @@ export const metadata = { title: "Donate", description: `Support free street med
 export default function Donate() {
   return (
     <>
-      <PageHero eyebrow="Donate" title={donate.headline} lede={donate.body} />
+      <PageHero crumb="Donate" title={donate.headline} lede={donate.body} />
       <section className="section">
-        <div className="container split" style={{ alignItems: "start" }}>
-          <div className="reveal"><DonateWidget /></div>
-          <div className="reveal" style={{ background: "var(--forest-deep)", color: "#fff", borderRadius: "var(--radius-lg)", padding: "clamp(28px,4vw,48px)" }}>
-            <div className="eyebrow" style={{ color: "var(--gold)" }}>Your impact</div>
-            <ul className="impact-list">
-              {donate.impact.map((i) => <li key={i.amount}><strong>${i.amount.toLocaleString()}</strong><span style={{ color: "#c9d6cf" }}>{i.label}</span></li>)}
-            </ul>
-            <p style={{ color: "#8fa39a", fontSize: ".9rem", marginTop: 20 }}>Prefer to give by check, stock or DAF? Email <a href={`mailto:${site.email}`} style={{ color: "#fff" }}>{site.email}</a>.</p>
+        <div className="container split top">
+          <DonateWidget />
+          <div>
+            <p className="kicker">Your impact</p>
+            <h2>What your gift provides</h2>
+            <table className="impact-table"><tbody>
+              {donate.impact.map((i) => <tr key={i.amount}><td>${i.amount.toLocaleString()}</td><td>{i.label.charAt(0).toUpperCase() + i.label.slice(1)}</td></tr>)}
+            </tbody></table>
+            <p className="muted" style={{ marginTop: 24, fontSize: ".92rem" }}>To give by check, stock transfer or donor-advised fund, please email <a href={`mailto:${site.email}`}>{site.email}</a>.</p>
           </div>
         </div>
       </section>
