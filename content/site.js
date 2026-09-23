@@ -134,12 +134,37 @@ export const inventory = [
   { group: "Everyday needs", items: ["Clothes", "Shoes", "Snacks", "Public transportation passes"] },
 ];
 
+// Community partners — contact details are each organization's public info.
 export const partners = [
-  "Live4Lali",
-  "Red Cross",
-  "Hope Reaching Out",
-  "University of Illinois College of Medicine",
-  "University of Illinois Family Medicine Residency Program",
+  {
+    name: "Live4Lali",
+    url: "https://live4lali.org/",
+    phone: "(844) 584-5254",
+    note: "Harm reduction supplies: call or text (224) 297-4393",
+  },
+  {
+    name: "Red Cross",
+    url: "https://www.redcross.org/local/illinois/about-us/locations/quad-cities-and-northwest-illinois.html",
+    address: "727 N. Church Street, Rockford, IL 61103",
+    phone: "(815) 963-8471",
+  },
+  {
+    name: "Hope Reaching Out",
+    url: "", // add website and contact info when available
+  },
+  {
+    name: "University of Illinois College of Medicine",
+    url: "https://rockford.medicine.uic.edu/",
+    address: "1601 Parkview Avenue, Rockford, IL 61107",
+    phone: "(815) 395-0600",
+  },
+  {
+    name: "University of Illinois Family Medicine Residency Program",
+    url: "https://rockford.medicine.uic.edu/education/graduate-medical-education/family-medicine-residency/",
+    address: "1221 East State Street, Rockford, IL 61104",
+    phone: "(815) 972-1037",
+    email: "fprockford@uic.edu",
+  },
 ];
 
 // Add photos to /public/team and set `photo` to "/team/<file>.jpg".

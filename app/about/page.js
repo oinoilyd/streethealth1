@@ -2,6 +2,7 @@ import { site, mission, partners, executiveBoard, boardOfDirectors, emeritusBoar
 import PageHero from "@/components/PageHero";
 import CtaBand from "@/components/CtaBand";
 import TeamCard from "@/components/TeamCard";
+import PartnerCard from "@/components/PartnerCard";
 import { Spray } from "@/components/Botanical";
 
 export const metadata = { title: "About", description: `The mission, leadership and community partners of ${site.name}.` };
@@ -77,7 +78,7 @@ export default function About() {
         <div className="container">
           <p className="kicker center">Community partners</p>
           <h2 className="center" style={{ marginBottom: 28 }}>We work alongside</h2>
-          <div className="partners">{partners.map((p) => <span key={p}>{p}</span>)}</div>
+          <div className="partner-grid">{partners.map((p) => <PartnerCard partner={p} key={p.name} />)}</div>
         </div>
       </section>
       <CtaBand />

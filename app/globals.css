@@ -403,3 +403,12 @@ main > section.cta .container { padding-top: 48px; padding-bottom: 48px; }
   .facts > div { grid-template-columns: 1fr; gap: 2px; }
 }
 .contact-tile .value { overflow-wrap: anywhere; }
+
+.partner-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
+.partner-card { background: #fff; border: 1px solid var(--line); border-top: 3px solid var(--navy); padding: 22px 24px; display: flex; flex-direction: column; }
+.partner-card h3 { font-size: 1.12rem; margin-bottom: 10px; }
+.partner-card h3 a { color: var(--navy-deep); text-decoration: none; }
+.partner-card h3 a:hover { color: var(--red-deep); text-decoration: underline; }
+.partner-card ul { list-style: none; padding: 0; margin: 0 0 16px; font-size: .95rem; color: var(--ink-soft); display: grid; gap: 4px; }
+.partner-card li { overflow-wrap: anywhere; }
+.partner-card .text-link { margin-top: auto; align-self: flex-start; font-size: .92rem; }
